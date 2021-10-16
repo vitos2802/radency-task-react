@@ -1,0 +1,28 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 50px;
+  color: #fff;
+  background-color: #808080;
+  margin-bottom: 20px;
+}
+.box {
+  width: 30px;
+  height: 30px;
+}
+
+.cell {
+  width: 30%;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 50px;
+  background-color: lightgrey;
+  margin-bottom: 20px;
+}

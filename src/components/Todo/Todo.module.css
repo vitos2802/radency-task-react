@@ -1,0 +1,20 @@
+.icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #808080;
+}
+
+.cell {
+  width: 16%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btnBox {
+  display: flex;
+}

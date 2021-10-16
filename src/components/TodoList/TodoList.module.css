@@ -1,0 +1,46 @@
+.list {
+  padding: 40px 0;
+}
+
+.listHead,
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #808080;
+  height: 40px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.cell {
+  width: 16%;
+}
+
+.item {
+  background-color: lightgrey;
+  color: #000;
+}
+
+.btnBox {
+  display: flex;
+}
+
+.createBtn {
+  display: block;
+  padding: 15px 10px;
+  border-radius: 5%;
+}
