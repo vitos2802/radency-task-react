@@ -2,17 +2,20 @@ import { createAction } from '@reduxjs/toolkit';
 import { nanoid } from 'nanoid';
 import formatDate from '../../helpers/date';
 
-const addTodo = createAction('todos/add', ({ name, content, category }) => ({
-  payload: {
-    id: nanoid(),
-    name,
-    created: formatDate,
-    content,
-    category,
-    dates: '',
-    archived: false,
-  },
-}));
+const addTodo = createAction(
+  'todos/add',
+  ({ name, content, category, dates }) => ({
+    payload: {
+      id: nanoid(),
+      name,
+      created: formatDate,
+      content,
+      category,
+      dates,
+      archived: false,
+    },
+  }),
+);
 
 const editTodo = createAction(
   'todos/edit',

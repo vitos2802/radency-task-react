@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import todosActions from '../../redux/todos/todos-actions';
 import selectors from '../../redux/todos/todos-selectors';
 import styles from './TodoEditor.module.css';
+import searchDate from '../../helpers/searchDate';
 
 const TodoEditor = ({ onSave }) => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const TodoEditor = ({ onSave }) => {
     category: editedCategory,
     content: editedContent,
     id: editedId,
+    dates: editDates,
     created: editedCreated,
   } = useSelector(selectors.getEditedTodos);
 
@@ -20,10 +22,6 @@ const TodoEditor = ({ onSave }) => {
     editedCategory ? editedCategory : 'Task',
   );
   const [content, setContent] = useState(editedContent ? editedContent : '');
-
-  const formatCreated = new Date(editedCreated).toLocaleDateString('en-AU');
-  const dateUpdate = new Date().toLocaleDateString('en-AU');
-  const updateDates = `${formatCreated}, ${dateUpdate}`;
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
@@ -51,6 +49,7 @@ const TodoEditor = ({ onSave }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const contentDate = searchDate(content);
 
     editedName
       ? dispatch(
@@ -59,11 +58,18 @@ const TodoEditor = ({ onSave }) => {
             name,
             content,
             category,
-            dates: updateDates,
+            dates: contentDate ? `${contentDate}, ${editDates}` : editDates,
             created: editedCreated,
           }),
         )
-      : dispatch(todosActions.addTodo({ name, content, category }));
+      : dispatch(
+          todosActions.addTodo({
+            name,
+            content,
+            category,
+            dates: contentDate ? contentDate : editDates,
+          }),
+        );
 
     resetForm();
     onSave();
