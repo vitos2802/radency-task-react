@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/radency-task-react/static/css/main.0425fa05.chunk.css",
-    "main.js": "/radency-task-react/static/js/main.fdcbed73.chunk.js",
-    "main.js.map": "/radency-task-react/static/js/main.fdcbed73.chunk.js.map",
+    "main.js": "/radency-task-react/static/js/main.636b55e2.chunk.js",
+    "main.js.map": "/radency-task-react/static/js/main.636b55e2.chunk.js.map",
     "runtime-main.js": "/radency-task-react/static/js/runtime-main.0e32a136.js",
     "runtime-main.js.map": "/radency-task-react/static/js/runtime-main.0e32a136.js.map",
     "static/js/2.ce28dafb.chunk.js": "/radency-task-react/static/js/2.ce28dafb.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.0e32a136.js",
     "static/js/2.ce28dafb.chunk.js",
     "static/css/main.0425fa05.chunk.css",
-    "static/js/main.fdcbed73.chunk.js"
+    "static/js/main.636b55e2.chunk.js"
   ]
 }
